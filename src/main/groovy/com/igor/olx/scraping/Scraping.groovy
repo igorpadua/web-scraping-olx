@@ -37,7 +37,7 @@ class Scraping {
             }
 
             // Adiciona dados
-            if (precoFloat == 0.0f && titulo == null) {
+            if (precoFloat != 0.0f && titulo != null) {
                 dados.add([
                         titulo: titulo,
                         preco: precoFloat,
