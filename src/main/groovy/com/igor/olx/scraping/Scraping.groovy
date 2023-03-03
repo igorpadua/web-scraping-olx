@@ -24,9 +24,13 @@ class Scraping {
         anunciosList.each { anuncio ->
             // Pega colunas
             String titulo = anuncio.attr('title')
+            // Tira virgula do titulo
+            titulo = titulo.replace(',', '')
             String url = anuncio.attr('href')
             String preco = anuncio.getElementsByAttributeValueContaining('aria-label', 'Preço do item').text()
             String regiao = anuncio.getElementsByAttributeValueContaining('aria-label', 'Localização').text()
+            // tira virgula da regiao
+            regiao = regiao.replace(',', '')
 
             // Preco em float
             Float precoFloat
